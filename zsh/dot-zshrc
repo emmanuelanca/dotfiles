@@ -1,0 +1,15 @@
+source .profile
+
+PROMPT="%F{magenta}[%~]%f
+    $ "
+
+setopt histignorealldups sharehistory
+HISTSIZE=5000
+SAVEHIST=5000
+HISTFILE=~/.cache/zsh/history
+
+autoload -Uz compinit
+compinit
+
+alias ls="exa -1 --group-directories-first"
+alias doas="sudo"
