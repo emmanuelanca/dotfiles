@@ -1,0 +1,20 @@
+super + Return
+    alacritty
+
+super + h
+    rofi -modi run,window -show window
+
+super + {j,k,l,semicolon,u,i,o,p,7,8,9,0}
+    wm focus {1,2,3,4,5,6,7,8,9,10,11,12}
+
+super + space; {j,k,l,semicolon,u,i,o,p,7,8,9,0}
+    wm bind {1,2,3,4,5,6,7,8,9,10,11,12}
+
+super + space; super + {j} 
+    {vivaldi}
+
+super + {m,comma,period,slash}
+    wm move {left,center,right,full}
+
+super + BackSpace
+    dunstctl close-all

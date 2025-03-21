@@ -1,0 +1,70 @@
+#!/bin/env sh
+n_workspaces=12
+
+tmpfile="/tmp/windows"
+active_window="$(xdotool getactivewindow)"
+
+
+bind_active_window () {
+    echo "$(sed -E "s/(window_$1)=\".*\"/\1=\"$active_window\"/" $tmpfile)" \
+	 > "$tmpfile"
+}
+
+
+focus_window_n () {
+    window_id="$(eval "echo \$window_$1")"
+    xdotool windowfocus $window_id
+    xdotool windowraise $window_id
+}
+
+
+move_active_window () {
+    x=0
+    width=0
+    
+    xdotool windowstate --remove MAXIMIZED_HORZ $active_window
+    xdotool windowstate --remove MAXIMIZED_VERT $active_window
+
+    case "$1" in
+	"center")
+	    x=480
+	    width=960
+	    ;;
+	"left")
+	    x=0
+	    width=960
+	    ;;
+	"right")
+	    x=960
+	    width=960
+	    ;;
+	"full")
+	    x=0
+	    width=1920
+	    ;;
+    esac
+
+    xdotool windowmove $active_window $x 0
+    xdotool windowsize $active_window $width 1080
+}
+
+
+if [ ! -e "$tmpfile" ]; then
+    for n in $(seq 1 $n_workspaces); do
+    echo "window_$n=\"\"" >> "$tmpfile"
+done
+fi
+
+source "$tmpfile"
+
+case "$1" in
+    "bind")
+	bind_active_window $2
+	;;
+    "focus")
+	focus_window_n $2
+	;;
+    "move")
+	move_active_window $2
+	;;
+esac

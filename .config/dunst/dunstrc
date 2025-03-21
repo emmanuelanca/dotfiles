@@ -1,0 +1,17 @@
+[global]
+    timeout = 0
+    font = Monospace 8
+    frame_width = 1
+
+[urgency_low]
+    background = "#111111"
+    foreground = "#bbbbbb"
+
+[urgency_normal]
+    background = "#111111"
+    foreground = "#bbbbbb"
+
+[urgency_critical]
+    background = "#111111"
+    foreground = "#bbbbbb"
+    frame_color = "#990000"

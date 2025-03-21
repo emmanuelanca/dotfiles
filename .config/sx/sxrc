@@ -1,0 +1,7 @@
+ibus-daemon &
+sxhkd &
+xfce4-power-manager &
+dunst &
+blueman-applet &
+picom &
+exec i3

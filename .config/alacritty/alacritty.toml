@@ -1,0 +1,12 @@
+[terminal]
+shell = "/bin/zsh"
+
+[font]
+size = 8
+
+[window]
+opacity = 0.95
+
+[colors.primary]
+background = "#111111"
+foreground = "#bbbbbb"
