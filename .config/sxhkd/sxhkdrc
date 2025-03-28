@@ -13,8 +13,8 @@ super + space; {j,k,l,semicolon,u,i,o,p,7,8,9,0}
 super + space; super + {j} 
     {vivaldi}
 
-super + {m,comma,period,slash}
-    wm move {left,center,right,full}
+super + {m,comma,period,slash,n}
+    wm move {left,center,right,full,hidden}
 
 super + BackSpace
     dunstctl close-all
