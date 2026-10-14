@@ -23,20 +23,6 @@
 (make-directory "/tmp/emacs-autosaves/" t)
 (make-directory "/tmp/emacs-locks/" t)
 
-(setq-default mode-line-format
-  '("%e"
-    mode-line-front-space
-    mode-line-mule-info
-    mode-line-client
-    mode-line-modified
-    mode-line-remote
-    " "
-    (:propertize "%b" face bold)
-    "       "
-    (line-number-mode "L%l ")
-    (column-number-mode "C%c")))
-
-(set-face-attribute 'mode-line nil :background "green" :foreground "black")
 (column-number-mode +1)
 (which-key-mode +1)
 

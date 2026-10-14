@@ -27,16 +27,13 @@ white   = '#ebdbb2'
 
 [font]
 
-normal = { family = "Perfect DOS VGA 437", style = "Regular" }
-bold = { family = "Perfect DOS VGA 437", style = "Bold" }
-italic = { family = "Perfect DOS VGA 437", style = "Italic" }
-bold_italic = { family = "Perfect DOS VGA 437", style = "Bold Italic" }
+normal      = { family = "monospace", style = "Regular" }
+bold        = { family = "monospace", style = "Bold" }
+italic      = { family = "monospace", style = "Italic" }
+bold_italic = { family = "monospace", style = "Bold Italic" }
 
 size = 12.0
 
 [window]
 
-padding = { x = 4, y = 4 }
-dynamic_padding = true
-dimensions = { columns = 80, lines = 24 }
-resize_increments = true
+padding           = { x = 4, y = 4 }

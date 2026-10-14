@@ -1,6 +1,7 @@
 ;; -*- lexical-binding: t; -*-
 
 (use-package corfu
+  :ensure t
   :custom
   (corfu-auto t)
   (corfu-cycle t)
