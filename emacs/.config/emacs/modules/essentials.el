@@ -14,6 +14,8 @@
       inhibit-startup-echo-area-message user-login-name
       initial-scratch-message nil)
 
+(setq-default mode-line-frame-identification "")
+
 (setq backup-directory-alist `(("." . "/tmp/emacs-backups/"))
       auto-save-file-name-transforms `((".*" "/tmp/emacs-autosaves/" t))
       auto-save-list-file-prefix "/tmp/emacs-autosaves/.saves-"
